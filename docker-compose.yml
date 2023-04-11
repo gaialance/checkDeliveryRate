@@ -7,6 +7,8 @@ services:
       - MYSQL_PASSWORD=test123
     ports:
       - 33060:3306
+    volumes:
+      - my-datavolume:/var/lib/mysql
   web:
     build: .
     env_file:
@@ -17,4 +19,6 @@ services:
     depends_on:
       db:
         condition: service_started
+volumes:
+  my-datavolume:
   
