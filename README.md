@@ -11,5 +11,5 @@
 
 6. then can run the application api
 
-7. localhost:<port>/api for the swagger
+7. localhost: < port > /api for the swagger
 
