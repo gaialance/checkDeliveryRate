@@ -13,10 +13,15 @@ import { JwtModule } from '@nestjs/jwt';
 import { jwtConstants } from './auth/constants';
 import { ValidationErrorFilter } from './filter/validation.filter';
 import { SumsArrayModule } from './sums-array/sums-array.module';
+import configuration from './config/configuration';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      load: [configuration],
+      isGlobal:true,
+      cache:true
+    }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
