@@ -1,15 +1,24 @@
+<!-- using backend mysql -->
+
 <!-- Nest Js setup -->
 1. docker-compose up
 
-2. need to run the image manually as there i no way to determine when the SQL finish running
+2. After Service start up on the docker, we can use npm run migration:run to generate all the table for it
 
-3. after SQL finish running and started we start the web image
+3. Need to "npm run seeds" to generate default user
 
-4. after starting need to go to terminal and run two command "npm run migration:run" this will install all the tables on to the backend mysql
+4. then can run the application api with npm start
 
-5. Need to "npm run seeds" to generate default user
+5. localhost:<port>/api for the swagger
 
-6. then can run the application api
+<!-- for local -->
 
+<<<<<<< Updated upstream
 7. localhost: < port > /api for the swagger
+=======
+<!-- with mysql setup completely -->
+1. npm run build
+2. npm migration:run
+3. npm start
+>>>>>>> Stashed changes
 
