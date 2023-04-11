@@ -9,16 +9,11 @@
 
 4. then can run the application api with npm start
 
-5. localhost:<port>/api for the swagger
-
 <!-- for local -->
+1. npm start:dev
 
-<<<<<<< Updated upstream
-7. localhost: < port > /api for the swagger
-=======
 <!-- with mysql setup completely -->
 1. npm run build
 2. npm migration:run
 3. npm start
->>>>>>> Stashed changes
 
