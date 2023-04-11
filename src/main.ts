@@ -3,6 +3,7 @@ import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { ValidationError, ValidationPipe } from '@nestjs/common';
 import { ValidationErrorException } from './interceptor/validation.interceptor';
+import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -27,6 +28,9 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(3002);
+  // Get config variable
+  const configService = app.get(ConfigService);
+  const port = configService.get<number>('port');
+  await app.listen(port);
 }
 bootstrap();
