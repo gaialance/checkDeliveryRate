@@ -15,7 +15,7 @@ services:
       - .env
     command: yarn start
     ports:
-      - "3001:3001"
+      - ${PORT}:${PORT}
     depends_on:
       db:
         condition: service_started

@@ -5,9 +5,9 @@
 
 3. after SQL finish running and started we start the web image
 
-4. after starting need to go to terminal and run two command npm run migration:run this will install all the tables on to the backend mysql
+4. after starting need to go to terminal and run two command "npm run migration:run" this will install all the tables on to the backend mysql
 
-5. Need to run seeds to generate default user
+5. Need to "npm run seeds" to generate default user
 
 6. then can run the application api
 
